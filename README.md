@@ -51,9 +51,9 @@ Ex:
 
 Additionally, the console supports `<class name>.<command>(<parameters>)` syntax.
 Ex:
-`City.show(my_city_id)
+`City.show(my_city_id)`
 
-#### 0x02. AirBnB clone - MySQL
+#### Project: 0x02. AirBnB clone - MySQL
 Date: 
 Started 03-27-2020, must end by 04-03-2020
 
