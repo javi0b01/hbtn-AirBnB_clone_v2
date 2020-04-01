@@ -5,6 +5,9 @@ from models import storage
 from datetime import datetime
 from models.base_model import BaseModel
 from models.user import User
+t
+
+
 from models.state import State
 from models.city import City
 from models.amenity import Amenity
@@ -43,6 +46,17 @@ class HBNBCommand(cmd.Cmd):
                 raise SyntaxError()
             my_list = line.split(" ")
             obj = eval("{}()".format(my_list[0]))
+            if len(my_list) > 1:
+                for i in range(1, len(my_list)):
+                    my_list[i] = my_list[i].replace("=", " ")
+                    attr = split(my_list[i])
+                    attr[1] = attr[1].replace("_", " ")
+                    if attr[1][0] == '"' and attr[1][len(attr[1]) - 1] == '"':
+                        attr[1] = attr[1][1:-1]
+                    try:
+                        obj.__dict__[attr[0]] = eval(attr[1])
+                    except Exception:
+                        obj.__dict__[attr[0]] = attr[1]
             obj.save()
             print("{}".format(obj.id))
         except SyntaxError:
