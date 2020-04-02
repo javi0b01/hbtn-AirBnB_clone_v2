@@ -35,7 +35,7 @@ class DBStorage:
         my_list = []
         my_dict = {}
         if cls is None:
-            my_list = [State, City]
+            my_list = [User, State, City]
             for i in my_list:
                 qry = self.__session.query(i)
                 for i in qry:
