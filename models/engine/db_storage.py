@@ -2,6 +2,7 @@
 from os import getenv
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker, scoped_session
+from sqlalchemy.ext.declarative import declarative_base
 from models.base_model import BaseModel, Base
 from models.user import User
 from models.state import State
@@ -31,18 +32,22 @@ class DBStorage:
 
     def all(self, cls=None):
         """ Public instance method """
+        my_list = []
         my_dict = {}
         if cls is None:
-            my_list = [User, State, City, Amenity, Place, Review]
+            my_list = [State, City]
             for i in my_list:
-                query = self.__session.query(i)
+                qry = self.__session.query(i)
+                for i in qry:
+                    item = "{}.{}".format(type(i).__name__, i.id)
+                    my_dict[item] = i
         else:
             if type(cls) is str:
                 cls = eval(cls)
-            query = self.__session.query(cls)
-        for i in query:
-            item = "{}.{}".format(type(i).__name__, i.id)
-            my_dict[item] = i
+            qry = self.__session.query(cls)
+            for i in qry:
+                item = "{}.{}".format(type(i).__name__, i.id)
+                my_dict[item] = i
         return (my_dict)
 
     def new(self, obj):
