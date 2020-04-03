@@ -42,9 +42,10 @@ class FileStorage:
             obj: given object
         """
 
-        if obj._sa_instance_state is not None:
-            delattr(obj, '_sa_instance_state')
         if obj:
+            if obj._sa_instance_state is not None:
+                delattr(obj, '_sa_instance_state')
+
             key = "{}.{}".format(type(obj).__name__, obj.id)
             self.__objects[key] = obj
 
@@ -70,7 +71,9 @@ class FileStorage:
 
     def delete(self, obj=None):
         """method that delete a object
-        """
+        Args:
+           obj: given object
+        """        
         if obj:
             item = "{}.{}".format(type(obj).__name__, obj.id)
             del self.__objects[item]
