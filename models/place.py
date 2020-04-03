@@ -3,7 +3,28 @@
 from os import getenv
 from sqlalchemy import Column, String, ForeignKey, Integer, Float
 from sqlalchemy.orm import relationship
+from sqlalchemy import Table
+from sqlalchemy.ext.declarative import declarative_base
 from models.base_model import BaseModel, Base
+from models.review import Review
+from models.amenity import Amenity
+import models
+
+"""place_amenity = Table(
+    'place_amenity',
+    Base.metadata,
+    Column(
+        'place_id',
+        String(60),
+        ForeignKey('places.id'),
+        primary_key=True,
+        nullable=False),
+    Column(
+        'amenity_id',
+        String(60),
+        ForeignKey('amenities.id'),
+        primary_key=True,
+        nullable=False))"""
 
 
 class Place(BaseModel, Base):
@@ -33,7 +54,6 @@ class Place(BaseModel, Base):
         price_by_night = Column(Integer, default=0, nullable=False)
         latitude = Column(Float, nullable=True)
         longitude = Column(Float, nullable=True)
-        reviews = relationship("Review", cascade="delete", backref="place")
     else:
         city_id = ""
         user_id = ""
@@ -46,12 +66,20 @@ class Place(BaseModel, Base):
         latitude = 0.0
         longitude = 0.0
         amenity_ids = []
+"""        reviews = relationship("Review", cascade="delete", backref="place")
+        amenities = relationship("Amenity", secondary='place_amenity',
+                                 viewonly=False)"""
 
-        @property
-        def reviews(self):
-            my_list = []
-            my_obj = models.storage.all(Review)
-            for key, value in my_obj.items():
-                if value.place_id == self.id:
-                    my_list.append(value)
-            return my_list
+"""    @property
+    def amenities(self):
+        my_list = []
+        my_obj = storage.all(Amenity)
+        for key, value in my_obj.items():
+            if value.amenity_id == self.id:
+                my_list.append(value)
+        return my_list
+
+    @amenities.setter
+    def amenities(self, am_obj=None):
+        if isinstance(am_obj, Amenity):
+            my_list.append(am_obj.id)"""
