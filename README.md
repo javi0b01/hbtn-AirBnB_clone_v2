@@ -58,5 +58,5 @@ Date:
 Started 03-27-2020, must end by 04-03-2020
 
 Team: 
-* Juan Camilo Esquivel
+* Juan Camilo Esquivel Ferreira
 * Javier Andrés Garzón Patarroyo
