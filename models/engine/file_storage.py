@@ -29,6 +29,7 @@ class FileStorage:
             return self.__objects
         else:
             my_dict = {}
+
             for key, value in self.__objects.items():
                 item = key.split(".")[0] == cls.__name__
                 if item:
@@ -40,6 +41,9 @@ class FileStorage:
         Args:
             obj: given object
         """
+
+        if obj._sa_instance_state is not None:
+            delattr(obj, '_sa_instance_state')
         if obj:
             key = "{}.{}".format(type(obj).__name__, obj.id)
             self.__objects[key] = obj
@@ -65,6 +69,8 @@ class FileStorage:
             pass
 
     def delete(self, obj=None):
+        """method that delete a object
+        """
         if obj:
             item = "{}.{}".format(type(obj).__name__, obj.id)
             del self.__objects[item]
