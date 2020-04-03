@@ -24,7 +24,7 @@ class DBStorage:
         my_host = getenv("HBNB_MYSQL_HOST")
         my_db = getenv("HBNB_MYSQL_DB")
         my_env = getenv("HBNB_ENV")
-        self.__engine = create_engine('mysql+mysqldb://{}:{}@{}/{}'
+        self.__engine = create_engine("mysql+mysqldb://{}:{}@{}/{}"
                                       .format(my_user, my_pwd, my_host,
                                               my_db), pool_pre_ping=True)
         if "test" == my_env:
@@ -35,7 +35,7 @@ class DBStorage:
         my_list = []
         my_dict = {}
         if cls is None:
-            my_list = [State, City]
+            my_list = [User, State, City, Place, Review]
             for i in my_list:
                 qry = self.__session.query(i)
                 for i in qry:
