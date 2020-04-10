@@ -99,11 +99,11 @@ Environment variables will be your best friend for this project!
 
 ## Tasks
 * [x] 0. Fork me if you can!
-* [x] 1. Bug free!
+* [ ] 1. Bug free!
 * [x] 2. Console improvements
 * [x] 3. MySQL setup development
 * [x] 4. MySQL setup test
-* [ ] 5. Delete object
+* [x] 5. Delete object
 * [x] 6. DBStorage - States and Cities
 * [x] 7. DBStorage - User
 * [x] 8. DBStorage - Place
