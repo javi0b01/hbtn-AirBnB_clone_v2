@@ -147,6 +147,7 @@ In this first deployment project, you will be deploying your web_static work. Yo
   - [CI/CD](https://resources.collab.net/blogs/walk-before-you-run-understanding-ci-in-cd)
 * [Nginx configuration for beginners](http://nginx.org/en/docs/beginners_guide.html)
 * [Difference between root and alias on NGINX](https://blog.heitorsilva.com/en/nginx/diferenca-entre-root-e-alias-do-nginx/)
+* [Tip](https://stackoverflow.com/questions/10631933/nginx-static-file-serving-confusion-with-root-alias)
 * [Fabric for Python 3](https://github.com/mathiasertl/fabric)
 * [Fabric Documentation](http://www.fabfile.org/)
 * [AirBnB clone](https://intranet.hbtn.io/concepts/74)
