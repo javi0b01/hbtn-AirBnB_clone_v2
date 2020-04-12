@@ -65,7 +65,7 @@ exec { "exec_8":
 
 exec { "exec_9":
   require => Exec["exec_8"],
-  command => "sudo sed -i '38i\tlocation /hbnb_static/ {\n\t\talias /data/web_static/current/;\n\t\tautoindex off;\n\t}\n' /etc/nginx/sites-available/default",
+  command => "sudo sed -i \'38i\\tlocation /hbnb_static/ {\n\t\talias /data/web_static/current/;\n\t\tautoindex off;\n\t}\n' /etc/nginx/sites-available/default",
   path    => ['/usr/bin', '/bin'],
   returns => [0,1],
   before   => Exec['exec_10']
