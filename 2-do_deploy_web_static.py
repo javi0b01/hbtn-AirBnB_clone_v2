@@ -19,15 +19,15 @@ def do_deploy(archive_path):
         releases = "/data/web_static/releases/"
         current = "/data/web_static/current"
         put(archive_path, "/tmp/")
-        run("mkdir -p {}{}/".format(releases, filename))
-        run("tar -xzf /tmp/{} -C {}{}/".
+        run("sudo mkdir -p {}{}/".format(releases, filename))
+        run("sudo tar -xzf /tmp/{} -C {}{}/".
             format(archive, releases, filename))
-        run("rm /tmp/{}".format(archive))
-        run("mv {}{}/web_static/* {}{}/".
+        run("sudo rm /tmp/{}".format(archive))
+        run("sudo mv {}{}/web_static/* {}{}/".
             format(releases, filename, releases, filename))
-        run("rm -rf {}{}/web_static".format(releases, filename))
-        run("rm -rf {}".format(current))
-        run("ln -s {}{}/ {}".format(releases, filename, current))
+        run("sudo rm -rf {}{}/web_static".format(releases, filename))
+        run("sudo rm -rf {}".format(current))
+        run("sudo ln -s {}{}/ {}".format(releases, filename, current))
         return True
     except:
         return False
