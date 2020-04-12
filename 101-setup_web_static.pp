@@ -62,10 +62,10 @@ exec { "exec_8":
   before   => Exec['exec_9']
 }
 
-
 exec { "exec_9":
   require => Exec["exec_8"],
-  command => "sudo sed -i \'38i\\tlocation /hbnb_static/ {\n\t\talias /data/web_static/current/;\n\t\tautoindex off;\n\t}\n' /etc/nginx/sites-available/default",
+  environment => ["upd=\\tlocation /hbnb_static/ {\n\t\talias /data/web_static/current/;\n\t\tautoindex off;\n\t}\n"],
+  command => "sudo sed -i '38i $upd' /etc/nginx/sites-available/default",
   path    => ['/usr/bin', '/bin'],
   returns => [0,1],
   before   => Exec['exec_10']
