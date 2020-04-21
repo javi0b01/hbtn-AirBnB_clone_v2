@@ -237,7 +237,7 @@ by _Guillaume_
 * [ ] 11. HBNB filters
 * [ ] 12. HBNB is alive!
 
-## Developer in 0x03. AirBnB clone - Deploy static
+## Developer in 0x04. AirBnB clone - Web framework
 Javier Andrés Garzón Patarroyo
 - [website](https://tecnoayuda.co/)
 
