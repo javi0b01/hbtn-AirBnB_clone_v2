@@ -7,7 +7,7 @@ from models.amenity import Amenity
 app = Flask(__name__)
 
 
-@app.route("/hbnb_filters")
+@app.route("/hbnb_filters", strict_slashes=False)
 def hbnb_filters():
     states = list(storage.all(State).values())
     amenities = list(storage.all(Amenity).values())
