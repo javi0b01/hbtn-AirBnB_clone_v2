@@ -55,14 +55,14 @@ class FileStorage:
         my_dict = {}
         for key, value in self.__objects.items():
             my_dict[key] = value.to_dict()
-        with open(self.__file_path, 'w', encoding="UTF-8") as f:
+        with open(self.__file_path, "w", encoding="UTF-8") as f:
             json.dump(my_dict, f)
 
     def reload(self):
         """serialize the file path to JSON file path
         """
         try:
-            with open(self.__file_path, 'r', encoding="UTF-8") as f:
+            with open(self.__file_path, "r", encoding="UTF-8") as f:
                 for key, value in (json.load(f)).items():
                     value = eval(value["__class__"])(**value)
                     self.__objects[key] = value
@@ -78,7 +78,6 @@ class FileStorage:
             item = "{}.{}".format(type(obj).__name__, obj.id)
             del self.__objects[item]
 
-
     def close(self):
-        """ method for deserializing the JSON file to objects """
+        """ call method for deserializing the JSON file to objects """
         self.reload()
