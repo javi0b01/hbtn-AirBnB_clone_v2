@@ -65,7 +65,6 @@ by _Guillaume_
 * [ ] 12. HBNB is alive!
 
 ## Developer
-Javier Andrés Garzón Patarroyo
-- [website](https://tecnoayuda.co/)
+[javi](https://github.com/javi0x00)
 
 :man_technologist: :books: :computer: :globe_with_meridians:

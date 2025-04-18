@@ -113,7 +113,7 @@ Environment variables will be your best friend for this project!
 * [ ] 10. DBStorage - Amenity... and BOOM!
 
 ## Developers in 0x02. AirBnB clone - MySQL
-Juan Camilo Esquivel, Javier Andrés Garzón Patarroyo
+Juan Camilo Esquivel, [javi](https://github.com/javi0x00)
 
 -- -- -- --
 
@@ -164,8 +164,7 @@ In this first deployment project, you will be deploying your web_static work. Yo
 * [x] 5. Puppet for setup
 
 ## Developer in 0x03. AirBnB clone - Deploy static
-Javier Andrés Garzón Patarroyo
-- [website](https://tecnoayuda.co/)
+[javi](https://github.com/javi0x00)
 
 :man_technologist: :books: :computer: :globe_with_meridians:
 
@@ -238,7 +237,6 @@ by _Guillaume_
 * [x] 12. HBNB is alive!
 
 ## Developer in 0x04. AirBnB clone - Web framework
-Javier Andrés Garzón Patarroyo
-- [website](https://tecnoayuda.co/)
+[javi](https://github.com/javi0x00)
 
 :man_technologist: :books: :computer: :globe_with_meridians:
