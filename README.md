@@ -1,5 +1,4 @@
 # HBNB
-
 This is the console /command interpreter for the Holberton Airbnb clone project. The console can be used to store objects in and retrieve objects from a JSON.
 
 ### Supported classes:
@@ -58,9 +57,6 @@ Ex:
 # 0x02. AirBnB clone - MySQL
 Foundations - Higher-level programming ― AirBnB clone
 
-###### :copyright: **[Holberton School](https://www.holbertonschool.com/)**
-by _Guillaume_
-
 ## Learning Objectives
 ###### Background Context
 Environment variables will be your best friend for this project!
@@ -113,15 +109,12 @@ Environment variables will be your best friend for this project!
 * [ ] 10. DBStorage - Amenity... and BOOM!
 
 ## Developers in 0x02. AirBnB clone - MySQL
-Juan Camilo Esquivel, [javi](https://github.com/javi0x00)
+Juan Camilo Esquivel, [Javi](https://github.com/javi0b01)
 
 -- -- -- --
 
 # 0x03. AirBnB clone - Deploy static
 Foundations - Higher-level programming ― AirBnB clone
-
-###### :copyright: **[Holberton School](https://www.holbertonschool.com/)**
-by _Guillaume_
 
 ## Learning Objectives
 ###### Background Context
@@ -164,7 +157,7 @@ In this first deployment project, you will be deploying your web_static work. Yo
 * [x] 5. Puppet for setup
 
 ## Developer in 0x03. AirBnB clone - Deploy static
-[javi](https://github.com/javi0x00)
+[Javi](https://github.com/javi0b01)
 
 :man_technologist: :books: :computer: :globe_with_meridians:
 
@@ -172,9 +165,6 @@ In this first deployment project, you will be deploying your web_static work. Yo
 
 # 0x04. AirBnB clone - Web framework
 Foundations - Higher-level programming ― AirBnB clone
-
-###### :copyright: **[Holberton School](https://www.holbertonschool.com/)**
-by _Guillaume_
 
 ## Learning Objectives
 ###### General
@@ -237,6 +227,6 @@ by _Guillaume_
 * [x] 12. HBNB is alive!
 
 ## Developer in 0x04. AirBnB clone - Web framework
-[javi](https://github.com/javi0x00)
+[Javi](https://github.com/javi0b01)
 
 :man_technologist: :books: :computer: :globe_with_meridians:

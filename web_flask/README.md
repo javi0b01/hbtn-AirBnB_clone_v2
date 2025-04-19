@@ -1,9 +1,6 @@
 # 0x04. AirBnB clone - Web framework
 Foundations - Higher-level programming ― AirBnB clone
 
-###### :copyright: **[Holberton School](https://www.holbertonschool.com/)**
-by _Guillaume_
-
 ## Learning Objectives
 ###### General
 * What is a Web Framework
@@ -65,6 +62,6 @@ by _Guillaume_
 * [ ] 12. HBNB is alive!
 
 ## Developer
-[javi](https://github.com/javi0x00)
+[Javi](https://github.com/javi0b01)
 
 :man_technologist: :books: :computer: :globe_with_meridians:
